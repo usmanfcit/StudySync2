@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "StudySync",
-    "slug": "studysync",
+    "slug": "studysync-f-2",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon2.png",
@@ -24,14 +24,15 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.usman712.studysync"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "extra": {
       "eas": {
-        "projectId": "15043b84-83a8-45ae-9d5b-852dabb938da"
+        "projectId": "6aaa368b-235c-4f15-87c9-49aae9cfb204"
       }
     },
     "owner": "usman712"
