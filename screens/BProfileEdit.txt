@@ -1,0 +1,81 @@
+import * as React from "react";
+import { View, Text } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
+import { Image } from "expo-image";
+import styles from './Screen_Styles/ProfileEditStyle';
+import { TouchableOpacity } from "react-native";
+import { useNavigation } from '@react-navigation/native';
+import {FIREBASE_REALTIME_DB} from '../FireBaseConfig';
+
+firebase = FIREBASE_REALTIME_DB;
+
+const ProfileEdit = () => {
+
+  const navigation = useNavigation();
+  return (
+    <View style={styles.profileEdit}>
+      <LinearGradient
+        style={styles.profileEditChild}
+        locations={[0, 1]}
+        colors={["#9c2cf3", "#3a49f9"]}
+      />
+
+      <View style={[styles.profileEditItem, styles.rectangleLayout]} />
+      <View style={[styles.profileEditInner, styles.rectangleLayout]} />
+      <View style={[styles.rectangleView, styles.rectangleLayout]} />
+      
+      {/* <View style={[styles.profileEditChild1, styles.rectangleLayout]} /> */}
+
+      <Text style={[styles.username, styles.phoneTypo]}>Username</Text>
+
+
+      <Text style={[styles.editProfile, styles.updateTypo]}>Edit Profile</Text>
+      <Text style={[styles.phoneNumber, styles.phoneTypo]}>Phone Number</Text>
+      <Text style={[styles.emailId, styles.phoneTypo]}>Email I’d</Text>
+      <Text style={[styles.phoneNumber1, styles.phoneTypo]}>Phone Number</Text>
+
+
+      {/* <Text style={[styles.password, styles.phoneTypo]}>Password</Text> */}
+
+
+      <LinearGradient
+        style={[styles.rectangleLineargradient, styles.rectangleLayout]}
+        locations={[0, 1]}
+        colors={["rgba(156, 44, 243, 0.9)", "rgba(58, 73, 249, 0.9)"]}
+      />
+      <Text style={[styles.update, styles.updateTypo]}>Update</Text>
+      <Text style={[styles.usman, styles.textTypo]}>Usman</Text>
+      <Text style={[styles.changePicture, styles.textTypo]}>
+        
+      </Text>
+      <Text style={[styles.usmangmailcom, styles.textTypo]}>
+        usman@gmail.com
+      </Text>
+      <Text style={[styles.text, styles.textTypo]}>+92300495221</Text>
+
+      {/* <Text style={[styles.text1, styles.textTypo]}>12345</Text> */}
+
+    <TouchableOpacity
+      onPress={() => navigation.navigate('Home')}
+    >
+      <Image
+        style={styles.arrowLeftIcon}
+        contentFit="cover"
+        source={require("../assets/arrow--short-left.png")}
+      />
+    </TouchableOpacity>
+
+    {/* <TouchableOpacity
+      style={styles.notificationsTabChild}
+      onPress={() => navigation.navigate('Home')}
+    >
+      <Text >Home</Text>
+    </TouchableOpacity> */}
+      
+    </View>
+  );
+};
+
+
+
+export default ProfileEdit;
